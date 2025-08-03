@@ -24,7 +24,7 @@ namespace Assignment1.Models
         [Display(Name = "Species")]
         public string Species { get; set; }
 
-        [ForeignKey("Vet Id")]
+        [ForeignKey("VetDoctor")]
         public int VetDoctorId { get; set; }
 
         public VetDoctor VetDoctor { get; set; }

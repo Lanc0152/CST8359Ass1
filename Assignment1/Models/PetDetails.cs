@@ -7,13 +7,12 @@ namespace Assignment1.Models
     {
         [Key]
         public int Id { get; set; }
-
-        [Required]
+        
         [StringLength(500)]
         [Display(Name = "Vet Notes")]
         public string VetNotes { get; set; }
         
-        [ForeignKey("Pet Id")]
+        [ForeignKey("Pet")]
         public int PetId { get; set; }
 
         public Pet Pet { get; set; }

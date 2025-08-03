@@ -1,0 +1,47 @@
+﻿@model Assignment1.Models.PetDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+
+
+<h4>Vet Notes</h4>
+<p>
+    For pet <strong>@Model.Pet?.Name</strong> (Microchip ID: @Model.Pet?.MicrochipId)
+</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="noteFile">Upload Vet Notes (.txt)</label>
+                <input type="file" name="noteFile" class="form-control" accept=".txt" />
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="VetNotes" class="control-label"></label>
+                <input asp-for="VetNotes" class="form-control" />
+                <span asp-validation-for="VetNotes" class="text-danger"></span>
+            </div>
+            <!-- So that the pet id will not be set to zero -->
+            <input type="hidden" asp-for="PetId" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
