@@ -11,5 +11,6 @@
     <WebStackScaffolding_DbContextTypeFullName>Assignment1.Data.VetSystemDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\Properties\PublishProfiles\LancAss1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

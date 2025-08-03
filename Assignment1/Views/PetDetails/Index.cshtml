@@ -26,7 +26,7 @@
                     @Html.DisplayFor(modelItem => item.VetNotes)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Pet.MicrochipId)
+                    <p> @Html.DisplayFor(modelItem => item.Pet.Name)</p> (@Html.DisplayFor(modelItem => item.Pet.MicrochipId))
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
