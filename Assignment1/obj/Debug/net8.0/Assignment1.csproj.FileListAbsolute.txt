@@ -290,3 +290,9 @@ C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\
 C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\obj\Debug\net8.0\Assignme.A5F6ECAD.Up2Date
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Algonquin Semester 6\CST8359 - .NET\Assignment1\Assignment1\obj\Debug\net8.0\Assignment1.MvcApplicationPartsAssemblyInfo.cs

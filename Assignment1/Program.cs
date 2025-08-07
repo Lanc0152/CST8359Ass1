@@ -1,4 +1,6 @@
 using Assignment1.Data;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 
@@ -11,7 +13,29 @@ namespace Assignment1
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            //builder.Services.AddControllersWithViews();
+
+            //Possible workaround for circular json dependency
+            //builder.Services.AddControllers().AddJsonOptions(options =>
+            //{
+            //    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+            //}); 
+
+            builder.Services.AddControllers();
+
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "VetSystem API",
+                    Description = "API Version of assignment1",
+                });
+                options.EnableAnnotations();
+            });
+
+
             var connection = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<VetSystemDbContext>(options => options.UseSqlServer(connection));
             var app = builder.Build();
@@ -42,9 +66,21 @@ namespace Assignment1
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseSwagger();
+            app.UseSwaggerUI();
+
+            //From Ass1
+            //app.MapControllerRoute(
+            //    name: "default",
+            //    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllers();
+
+            app.MapGet("/", context =>
+            {
+                context.Response.Redirect("/swagger");
+                return Task.CompletedTask;
+            });
 
             app.Run();
         }
